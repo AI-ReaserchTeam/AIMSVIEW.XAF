@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="AIMSVIEW">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Logoff" TargetObjectsCriteriaMode="TrueAtLeastForOne" />
+    </Actions>
+  </ActionDesign>
+  <NavigationItems NavigationStyle="Accordion" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="23.1.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor">
+    <ListView Id="Apartment_ListView" ImageName="LayoutCustomization_Item" InlineEditMode="PopupEditForm" />
+    <ListView Id="Property_Apartments_ListView">
+      <Columns>
+        <ColumnInfo Id="RentAmount" Width="84" />
+        <ColumnInfo Id="IsAvailable" Width="91" />
+        <ColumnInfo Id="ApartmentType" Width="94" />
+        <ColumnInfo Id="Consultant" Width="150" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

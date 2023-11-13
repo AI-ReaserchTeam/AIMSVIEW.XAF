@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="AIMSVIEW.XAF">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+  </BOModel>
+  <NavigationItems DefaultLeafImageName="Action_OrganizeDashboard" DefaultParentImageName="Action_ColumnChooser" StartupNavigationItem="Rent_ListView">
+    <Items>
+      <Item Id="Rental" Index="0" />
+      <Item Id="Projects" Index="1" />
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="23.1.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="Apartment_ListView">
+      <Columns>
+        <ColumnInfo Id="IsVacant" ImageForFalse="Action_Cancel" ImageForTrue="Action_MarkCompleted" Caption="Vacant" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ApplicationUser_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PermissionPolicyUser">
+              <LayoutItem Id="ChangePasswordOnFirstLogon" SizeConstraintsType="Default" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="Rent_ListView">
+      <Columns>
+        <ColumnInfo Id="IsPaid" ImageForFalse="State_Validation_Invalid" ImageForTrue="State_Validation_Valid" />
+      </Columns>
+    </ListView>
+    <ListView Id="Tenant_ListView" ImageName="BO_Employee" />
+  </Views>
+</Application>
